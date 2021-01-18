@@ -25,8 +25,17 @@ Se incluyeron varios archvios de audios en la carpeta examples para poder probar
 
 Se redujó el número de capas de convoluciones de 3 a 1. El modelo mostró mejor rendimiento con una sola capa.
 
-![1 Capa](https://github.com/raime1/HumanNoices/blob/main/model_test_1conv.png) ![2 Capas](https://github.com/raime1/HumanNoices/blob/main/model_test_2conv.png) ![3 Capas](https://github.com/raime1/HumanNoices/blob/main/model_test_3conv.png) 
+#### 1 Capa
 
+![1 Capa](https://github.com/raime1/HumanNoices/blob/main/model_test_1conv.png) 
+
+#### 2 Capas
+
+![2 Capas](https://github.com/raime1/HumanNoices/blob/main/model_test_2conv.png) 
+
+#### 3 Capas
+
+![3 Capas](https://github.com/raime1/HumanNoices/blob/main/model_test_3conv.png) 
 
 ## Sources
 

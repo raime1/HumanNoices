@@ -1,3 +1,10 @@
+"""
+Based on Valerio Velardo's CNN for music genre clasification
+Is modified to clasify a set of human noices
+
+Source: https://github.com/musikalkemist/DeepLearningForAudioWithPython/blob/master/16-%20How%20to%20implement%20a%20CNN%20for%20music%20genre%20classification/code/cnn_genre_classifier.py
+ESC-50 dataset: https://github.com/karolpiczak/ESC-50
+"""
 import os
 import json
 import math
@@ -7,11 +14,12 @@ import numpy as np
 from tensorflow.keras.models import load_model
 import argparse
 
+#Info for MFCC conversion of audio file
 SAMPLE_RATE = 22050
 TRACK_DURATION = 5 # measured in seconds
 SAMPLES_PER_TRACK = SAMPLE_RATE * TRACK_DURATION
 
-
+#Classes of noices made by humans that can be clasified
 classes = [
     "crying_baby",
     "sneezing",
@@ -38,6 +46,8 @@ def predict(model, X):
 
     # get index with max value
     predicted_index = np.argmax(prediction, axis=1)
+
+    #Show results
     print("Predicted label: {}, Confidence: {}".format(classes[predicted_index[0]], prediction[0][predicted_index[0]]))
 
 if __name__ == "__main__":
@@ -63,8 +73,6 @@ if __name__ == "__main__":
     samples_per_segment = int(SAMPLES_PER_TRACK / num_segments)
     num_mfcc_vectors_per_segment = math.ceil(samples_per_segment / hop_length)
     data = {
-        "mapping": [],
-        "labels": [],
         "mfcc": []
     }
 
@@ -80,6 +88,7 @@ if __name__ == "__main__":
         mfcc = mfcc.T
         data["mfcc"].append(mfcc.tolist())
 
+    #Format dimension to use in the model
     X = np.array(data["mfcc"])
     X = X[..., np.newaxis]
     data_to_predict = X

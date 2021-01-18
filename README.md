@@ -25,7 +25,17 @@ Se incluyeron varios archvios de audios en la carpeta examples para poder probar
 
 Se redujó el número de capas de convoluciones de 3 a 1. El modelo mostró mejor rendimiento con una sola capa.
 
-![model_test_1conv.png](1 capa) ![model_test_1conv.png](2 capas) ![model_test_1conv.png](3 capas) 
+#### 1 Capa
+
+![model_test_1conv.png]
+
+#### 2 Capas
+
+![model_test_1conv.png]
+
+#### 3 Capas
+
+![model_test_1conv.png] 
 
 
 ## Sources

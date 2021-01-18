@@ -19,23 +19,13 @@ Proyecto para reconocer si un sonido es de procedencia humana o no. Basado en la
 
 > python recognize_sound.py -f audiofile.wav
 
-Se incluyeron varios archvios de audios en la carpeta examples para poder probar el modelo de manera rápida.
+Se incluyeron varios archvios de audios en la carpeta examples para poder probar el modelo de manera rÃ¡pida.
 
 ## Rendimiento
 
-Se redujó el número de capas de convoluciones de 3 a 1. El modelo mostró mejor rendimiento con una sola capa.
+Se redujÃ³ el nÃºmero de capas de convoluciones de 3 a 1. El modelo mostrÃ³ mejor rendimiento con una sola capa.
 
-#### 1 Capa
-
-![model_test_1conv.png]
-
-#### 2 Capas
-
-![model_test_1conv.png]
-
-#### 3 Capas
-
-![model_test_1conv.png] 
+![1 Capa](https://github.com/raime1/HumanNoices/blob/main/model_test_1conv.png) ![2 Capas](https://github.com/raime1/HumanNoices/blob/main/model_test_2conv.png) ![3 Capas](https://github.com/raime1/HumanNoices/blob/main/model_test_3conv.png) 
 
 
 ## Sources
